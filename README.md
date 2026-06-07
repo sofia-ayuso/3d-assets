@@ -1,2 +1,2 @@
-# 3d-Assets
+# 3d-assets
 3D objects
