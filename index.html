@@ -1,3 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+      background: transparent;
+    }
+  </style>
+</head>
+
 <body>
 
 <model-viewer
@@ -12,7 +37,9 @@
 <script>
   const params = new URLSearchParams(window.location.search);
   const model = params.get("model") || "phofinho.glb";
+
   document.getElementById("viewer").src = "./" + model;
 </script>
 
 </body>
+</html>
