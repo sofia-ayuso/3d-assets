@@ -12,20 +12,7 @@
 <script>
   const params = new URLSearchParams(window.location.search);
   const model = params.get("model") || "phofinho.glb";
-
-  const viewer = document.getElementById("viewer");
-
-  viewer.addEventListener("load", () => {
-    console.log("Loaded:", model);
-  });
-
-  viewer.addEventListener("error", (e) => {
-    console.error("Failed:", model, e);
-    document.body.innerHTML =
-      "<h2 style='font-family:sans-serif'>Failed to load " + model + "</h2>";
-  });
-
-  viewer.src = "./" + model;
+  document.getElementById("viewer").src = "./" + model;
 </script>
 
 </body>
