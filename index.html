@@ -27,14 +27,18 @@
 <body>
 
 <model-viewer
-  src="./phofinho.glb"
+  id="viewer"
   camera-controls
   auto-rotate
-  auto-rotate-delay="0"
   shadow-intensity="1"
-  exposure="1"
-  loading="eager">
+  exposure="1">
 </model-viewer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const model = params.get("model") || "phofinho.glb";
+  document.getElementById("viewer").src = model;
+</script>
 
 </body>
 </html>
